@@ -14,7 +14,7 @@ jobs:
       - name: Unzip project
         run: |
           mkdir work
-          unzip -o video-editor-2050-oct-13-2026-4-03-06-pm.zip -d work
+          unzip -o video-editor-2050-oct-13-2026-4-58-10-pm.zip -d work
       - name: Create debug keystore
         run: |
           keytool -genkey -v -keystore work/debug.keystore -storepass android -alias androiddebugkey -keypass android -keyalg RSA -keysize 2048 -validity 10000 -dname "CN=Android Debug,O=Android,C=US"
