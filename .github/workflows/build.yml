@@ -15,6 +15,9 @@ jobs:
         run: |
           mkdir work
           unzip -o video-editor-2050-oct-12-2026-10-22-13-pm.zip -d work
+      - name: Create debug keystore
+        run: |
+          keytool -genkey -v -keystore work/debug.keystore -storepass android -alias androiddebugkey -keypass android -keyalg RSA -keysize 2048 -validity 10000 -dname "CN=Android Debug,O=Android,C=US"
       - uses: gradle/actions/setup-gradle@v4
         with:
           gradle-version: 9.3.1
