@@ -17,7 +17,7 @@ jobs:
           unzip -o video-editor-2050-oct-12-2026-10-22-13-pm.zip -d work
       - uses: gradle/actions/setup-gradle@v4
         with:
-          gradle-version: 8.10.2
+          gradle-version: 9.3.1
       - name: Build
         working-directory: work
         run: gradle assembleDebug --no-daemon
